@@ -28,3 +28,13 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/HoloToolkit-Examples.meta
+Assets/HoloToolkit-Examples/
+Assets/HoloToolkit.meta
+Assets/HoloToolkit/
+Assets/csc.rsp
+Assets/csc.rsp.meta
+Assets/gmcs.rsp
+Assets/gmcs.rsp.meta
+Assets/smcs.rsp
+Assets/smcs.rsp.meta

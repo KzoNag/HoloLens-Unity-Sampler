@@ -1,0 +1,1 @@
+%1 -batchmode -quit -projectPath %2 -exportPackage Assets %3
