@@ -1,8 +1,11 @@
 # HoloLens-Unity-Sampler
 Samples for HoloLens features(include HoloToolkit) in Unity.
 
-# About HoloToolkit
-This repository depends on [HoloToolkit-Unity](https://github.com/KzoNag/HoloToolkit-Unity).
-(A fork of [Microsoft/HoloToolkit-Unity](https://github.com/Microsoft/HoloToolkit-Unity))  
+## HoloToolkit-Unity
+[HoloToolkit-Unity](https://github.com/Microsoft/HoloToolkit-Unity) is scripts and components for development of HoloLens application.  
+HoloLens-Unity-Sampler depends on [KzoNag/HoloToolkit-Unity](https://github.com/KzoNag/HoloToolkit-Unity).
+(A fork of Microsoft's original)  
 It is added as submodule.  
-See original page for detail.
+
+### Import HoloToolkit
+To import HoloToolkit, select tool menu "Tools/Import HoloToolkit".
