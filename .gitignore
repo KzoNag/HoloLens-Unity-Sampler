@@ -38,3 +38,7 @@ Assets/gmcs.rsp
 Assets/gmcs.rsp.meta
 Assets/smcs.rsp
 Assets/smcs.rsp.meta
+Assets/WSATestCertificate.pfx
+Assets/WSATestCertificate.pfx.meta
+UWP/
+WindowsStoreApp/
