@@ -980,13 +980,14 @@ GameObject:
   - 114: {fileID: 1057915884}
   - 114: {fileID: 1057915887}
   - 114: {fileID: 1057915888}
+  - 114: {fileID: 1057915889}
   m_Layer: 5
   m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1057915883
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1001,10 +1002,10 @@ RectTransform:
   m_Father: {fileID: 290981511}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 99, y: -14}
+  m_SizeDelta: {x: 190, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1057915884
 MonoBehaviour:
@@ -1044,7 +1045,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1057915885}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1057915889}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1057915885
@@ -1110,6 +1122,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioEventName: Decide
+--- !u!114 &1057915889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1057915882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1045bda49c2a564dae86c2535097ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1074253275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,6 +1147,7 @@ GameObject:
   - 114: {fileID: 1074253280}
   - 114: {fileID: 1074253279}
   - 114: {fileID: 1074253282}
+  - 114: {fileID: 1074253283}
   m_Layer: 5
   m_Name: LauncherWindow
   m_TagString: Untagged
@@ -1254,6 +1278,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PivotAxis: 0
+--- !u!114 &1074253283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1074253275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 749fc2a167e5b9841b4287a019fe4d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 593446844}
+  backButton: {fileID: 1585908383}
+  prototypeCell: {fileID: 1057915889}
+  source: {fileID: 11400000, guid: 559eb5cd5cf2a244f91f459c0b300a5c, type: 2}
 --- !u!1001 &1106046524
 Prefab:
   m_ObjectHideFlags: 0
@@ -1601,8 +1640,8 @@ GameObject:
   - 224: {fileID: 1585908382}
   - 222: {fileID: 1585908385}
   - 114: {fileID: 1585908384}
-  - 114: {fileID: 1585908383}
   - 114: {fileID: 1585908386}
+  - 114: {fileID: 1585908383}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -1667,7 +1706,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585908384}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1074253283}
+        m_MethodName: OnBackButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1585908384
