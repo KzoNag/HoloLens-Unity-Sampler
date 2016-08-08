@@ -137,6 +137,10 @@ Prefab:
       propertyPath: near clip plane
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 2035550, guid: b84b73491ac53a34095000876132a211, type: 2}
+      propertyPath: field of view
+      value: 17.9898
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b84b73491ac53a34095000876132a211, type: 2}
   m_IsPrefabParent: 0
