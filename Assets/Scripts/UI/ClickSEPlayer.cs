@@ -4,23 +4,26 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 
-public class ClickSEPlayer : MonoBehaviour, IPointerClickHandler
+namespace HoloLensUnitySampler
 {
-    public string audioEventName = "Decide";
-
-    public void OnPointerClick(PointerEventData eventData)
+    public class ClickSEPlayer : MonoBehaviour, IPointerClickHandler
     {
-        bool play = true;
+        public string audioEventName = "Decide";
 
-        var selectable = GetComponent<Selectable>();
-        if(selectable != null)
+        public void OnPointerClick(PointerEventData eventData)
         {
-            play = selectable.interactable;
-        }
+            bool play = true;
 
-        if(play)
-        {
-            HoloToolkit.Unity.UAudioManager.Instance.PlayEvent(audioEventName);
+            var selectable = GetComponent<Selectable>();
+            if (selectable != null)
+            {
+                play = selectable.interactable;
+            }
+
+            if (play)
+            {
+                HoloToolkit.Unity.UAudioManager.Instance.PlayEvent(audioEventName);
+            }
         }
     }
 }
