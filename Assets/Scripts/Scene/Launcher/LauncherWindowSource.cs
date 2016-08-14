@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using System.IO;
 
 namespace HoloLensUnitySampler
 {
@@ -11,6 +12,7 @@ namespace HoloLensUnitySampler
         public class Item
         {
             public string label;
+            public string sceneName { get { return Path.GetFileNameWithoutExtension(label); } }
             public string scenePath;
             public Item parent;
             public List<Item> children = new List<Item>();

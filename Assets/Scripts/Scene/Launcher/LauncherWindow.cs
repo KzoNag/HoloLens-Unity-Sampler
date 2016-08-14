@@ -63,7 +63,7 @@ namespace HoloLensUnitySampler
             }
             else
             {
-                Debug.Log("LoadScene:" + item.scenePath);
+                UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(item.sceneName);
             }
         }
 
