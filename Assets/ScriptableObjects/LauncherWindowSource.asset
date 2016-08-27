@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: LauncherWindowSource
   m_EditorClassIdentifier: 
   scenePathList:
-  - Assets/Scenes/Features/HoloLens/Test.unity
+  - Assets/Scenes/Features/HoloLens/Hand.unity
   - Assets/Scenes/Features/HoloToolkit/SpatialMapping.unity
   - Assets/Scenes/Features/Unity/Test.unity
