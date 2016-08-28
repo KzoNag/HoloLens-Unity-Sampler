@@ -26,6 +26,14 @@ namespace HoloLensUnitySampler.Scene.HoloLens.Hand
             InteractionManager.SourcePressed += InteractionManager_SourcePressed;
             InteractionManager.SourceReleased += InteractionManager_SourceReleased;
             InteractionManager.SourceUpdated += InteractionManager_SourceUpdated;
+
+#if false  
+            var handObj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            handObj.transform.SetParent(this.transform);
+            handObj.transform.localScale = Vector3.one * 0.03f;
+            handObj.SetActive(true);
+            handObj.GetComponent<Renderer>().material = normalMat;
+#endif
         }
 
         void OnDestroy()
@@ -40,6 +48,7 @@ namespace HoloLensUnitySampler.Scene.HoloLens.Hand
         void Update()
         {
             sb.Remove(0, sb.Length);
+            sb.AppendLine("**** CurrentReading ****");
             foreach(var state in InteractionManager.GetCurrentReading())
             {
                 Vector3 position, velocity;
@@ -48,6 +57,11 @@ namespace HoloLensUnitySampler.Scene.HoloLens.Hand
                 state.properties.location.TryGetVelocity(out velocity);
 
                 sb.AppendFormat("[id]{0}, [kind]{1}, [position]{2}, [velocity]{3}", state.source.id, state.source.kind, position, velocity).AppendLine();
+            }
+            sb.AppendLine("**** DetectingHands ****");
+            foreach (var pair in handObjects)
+            {
+                sb.AppendFormat("[id]{0}, [position]{1}", pair.Key, pair.Value.transform.position).AppendLine();
             }
             InfoWindow.Instance.InfoText = sb.ToString();
         }
@@ -83,7 +97,8 @@ namespace HoloLensUnitySampler.Scene.HoloLens.Hand
 
             if(handObjects.ContainsKey(state.source.id))
             {
-                handObjects[state.source.id].SetActive(false);
+                Destroy(handObjects[state.source.id]);
+                handObjects.Remove(state.source.id);
             }
         }
 
